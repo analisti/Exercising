@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="108.68" height="145.33" viewBox="0 0 108.68 145.33">
+  <g>
+    <polyline points="82.54 115.6 104.44 129.47 82.54 143.33" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"/>
+    <polyline points="26.14 115.6 4.24 129.47 26.14 143.33" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"/>
+    <path d="M40.82,108.13h27v19.63A10.24,10.24,0,0,1,57.62,138H51.06a10.241,10.241,0,0,1-10.24-10.24V108.13Z" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"/>
+    <path d="M83.63,58.57a29.433,29.433,0,0,1-4.85,16.22L67.86,108.13h-27L29.9,74.79A29.34,29.34,0,1,1,83.63,58.57Z" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"/>
+    <line x1="2" y1="62.42" x2="11.91" y2="62.42" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"/>
+    <line x1="11.91" y1="15.91" x2="19.99" y2="21.69" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"/>
+    <line x1="54.34" y1="2" x2="54.34" y2="11.73" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"/>
+    <line x1="13.56" y1="100.44" x2="21.15" y2="94.31" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"/>
+    <line x1="106.68" y1="62.42" x2="96.77" y2="62.42" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"/>
+    <line x1="96.77" y1="15.91" x2="88.7" y2="21.69" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"/>
+    <line x1="54.34" y1="2" x2="54.34" y2="11.73" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"/>
+    <line x1="95.12" y1="100.44" x2="87.54" y2="94.31" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"/>
+    <polyline points="60.88 107 68.99 60.16 61.1 66.94 54.34 60.16 49.16 66.94 42.18 60.16 50.74 106.09" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"/>
+    <line x1="40.82" y1="117.18" x2="67.86" y2="117.18" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"/>
+    <line x1="40.82" y1="125.33" x2="67.86" y2="125.33" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"/>
+  </g>
+</svg>

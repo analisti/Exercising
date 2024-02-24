@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio Pessoal</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="icon" href="img/cubo.svg" type="image/x-icon">
+</head>
+
+<body>
+    <!-- Navegação -->
+    <nav>
+        <div class="logo"></div>
+        <ul class="nav-links">
+            <li><a href="#about">Sobre</a></li>
+            <li><a href="#skills">Habilidades</a></li>
+            <li><a href="#projects">Projetos</a></li>
+            <li><a href="#contact">Contato</a></li>
+        </ul>
+    </nav>
+
+    <!-- Ícone para alternar entre os modos claro e escuro -->
+    <span id="theme-icon" title="Mudar o Tema">
+        <svg viewBox="0 0 20 20" aria-hidden="true" focusable="false" fill="currentColor"
+            xmlns="http://www.w3.org/2000/svg" class="StyledIconBase-ea9ulj-0 hPhvO">
+            <path fill-rule="evenodd"
+                d="M7.186 19.172c.789.51 1.701.855 2.814.828 1.111.027 2.025-.318 2.814-.828L12.797 17H7.203l-.017 2.172zM12.697 16c0-4.357 4.63-5.848 4.283-10.188-.218-2.738-2.073-5.81-6.98-5.81S3.238 3.074 3.019 5.813C2.672 10.152 7.303 11.643 7.303 16h5.394zM5 6c.207-2.598 2.113-4 5-4 2.886 0 4.654 1.371 4.861 3.969.113 1.424-.705 2.373-1.809 3.926C12.238 11.041 11.449 12.238 11 14H9c-.449-1.762-1.238-2.959-2.053-4.106C5.844 8.342 4.886 7.424 5 6z"
+                clip-rule="evenodd"></path>
+        </svg>
+    </span>
+
+    <!-- Conteúdo principal -->
+    <main>
+        <!-- Cabeçalho -->
+        <header>
+            <h1>Bem vindo ao meu portfólio</h1>
+            <p>Transformando Ideias em Experiências Digitais!</p>
+        </header>
+
+        <!-- Sobre -->
+        <section id="about">
+            <h2>Sobre Mim</h2>
+            <div class="about-content">
+                <p>“Ofereço serviços de software personalizados para criar sites incríveis e
+                    sistemas eficientes. Sou extremamente profissional trabalhando lado a lado com você para
+                    entender suas necessidades e transformá-las em realidade. Desde sites simples até sistemas
+                    complexos, estou aqui para ajudar. Vamos construir algo incrível juntos!”</p>
+            </div>
+        </section>
+
+        <!-- Habilidades -->
+        <section id="skills">
+            <h2>Habilidades</h2>
+            <h3>Front-end</h3>
+            <ul class="skills-list">
+                <li><i class="fab fa-html5"></i> HTML</li>
+                <li><i class="fab fa-css3-alt"></i> CSS</li>
+                <li><i class="fab fa-js-square"></i> JavaScript</li>
+                <li><i class="fab fa-react"></i> React Native (Desenvolvedor Mobile)</li>
+            </ul>
+            <h3>Back-end</h3>
+            <ul class="skills-list">
+                <li><i class="fab fa-java"></i> Java</li>
+                <li><i class="fas fa-database"></i> MySQL</li>
+                <li><i class="fas fa-leaf"></i> Spring Boot</li>
+            </ul>
+        </section>
+
+        <!-- Projetos -->
+        <section id="projects">
+            <h2>Projetos</h2>
+            <div class="project">
+                <a href="#">Demostrativo de como meu trabalho funciona</a>
+                <video width="320" height="240" controls muted>
+                    <source src="video/HardwareSoftware.mp4" type="video/mp4">
+                    Seu navegador não suporta o elemento de vídeo.
+                </video>
+                <a href="https://github.com/analisti" target="_blank" rel="nofollow">Repositório GitHub</a>
+            </div>
+        </section>
+
+        <!-- Carrossel -->
+        <div class="carousel">
+            <div class="item">
+                <img src="img/site01.svg" width="250px" height="300px" alt="Item 1">
+                <div class="fa fa-star checked"></div>
+                <h2>Sua página na WEB</h2>
+                <p>Preço: A partir de R$ 999,00</p>
+                <p>Descrição: Um site básico, perfeito para pequenos negócios ou projetos pessoais. Design limpo,
+                    funcionalidades essenciais e entrega rápida.</p>
+            </div>
+            <div class="item">
+                <img src="img/site02.svg" width="250px" height="300px" alt="Item 2">
+                <div class="fa fa-star checked"></div>
+                <h2>Seu site com cadastro de clientes ou produtos</h2>
+                <p>Preço: A partir de R$ 2.499,00</p>
+                <p>Descrição: Um site personalizado com design exclusivo, recursos avançados e integração com redes
+                    sociais. Ideal para empresas em crescimento.</p>
+            </div>
+            <div class="item">
+                <img src="img/sistema03.svg" width="250px" height="300px" alt="Item 3">
+                <div class="fa fa-star checked"></div>
+                <h2>Um sistema completo </h2>
+                <p>Preço: A partir de R$ 4.999,00</p>
+                <p>Descrição: Um sistema completo com painel de administração, segurança avançada e suporte contínuo.
+                    Perfeito para empresas que buscam escalabilidade.</p>
+            </div>
+        </div>
+
+        <!-- Contato -->
+        <section id="contact">
+            <h2>Contate-me</h2>
+            <form id="contact-form" method="POST" action="https://formspree.io/f/xbjnyrvq">
+                <div class="input-group">
+                    <label for="name">Nome:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="input-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="input-group">
+                    <label for="message">Mensagem:</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                <button type="submit">Enviar Mensagem</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>© 2024 analist.com@outlook.com</p>
+    </footer>
+
+    <!-- Script -->
+    <script src="scrypt.js" async></script>
+
+</body>
+
+</html>

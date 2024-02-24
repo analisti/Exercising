@@ -1,0 +1,312 @@
+/* Definindo fontes */
+:root {
+    --font-primary: 'Roboto', sans-serif;
+    --font-secondary: 'Open Sans', sans-serif;
+}
+
+/* Definição de cores */
+:root {
+    --primary-color: #737778;
+    --secondary-color: #f2f2f2;
+    --accent-color: #abe3ea;
+    --accent-color-light: #f6d775;
+}
+
+/* Resetando margens e paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos básicos para o corpo do documento */
+body {
+    font-family: 'Inter', sans-serif;
+    color: var(--primary-color);
+    line-height: 1.6;
+}
+
+/* Estilos para o modo escuro */
+.dark-mode {
+    background-color: #333;
+    color: #ccc;
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+/* Estilos para o ícone de tema */
+#theme-icon {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+#theme-icon svg {
+    width: 20px;
+    height: 20px;
+    transition: fill 0.5s ease;
+}
+
+/* Estilos para a navegação, logo e links */
+nav {
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    font-family: var(--font-secondary);
+    background: url('img/cubo.svg') no-repeat center center;
+    background-size: contain;
+    width: 100px;
+    height: 80px;
+    animation: pulse 2s infinite alternate;
+}
+
+.nav-links {
+    list-style-type: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.nav-links :hover {
+    transform: scale(1.1);
+}
+
+/* Estilos para o conteúdo principal */
+main {
+    text-align: center;
+    padding: 50px 0;
+}
+
+/* Estilos para o cabeçalho */
+header {
+    background: url('img/cuboright.svg') no-repeat;
+    background-size: 10%;
+    background-position: right center;
+    background-color: var(--secondary-color);
+    padding: 50px 0;
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), url('img/cuboright.svg');
+    transition: all 0.5s ease;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    animation: glow 2s infinite alternate;
+    /* Adicionando animação */
+}
+
+header:hover {
+    background-size: 15%;
+    background-color: var(--primary-color);
+}
+
+header h1 {
+    text-shadow: 3px 3px 2px rgba(0, 0, 0, 0.5);
+    color: white;
+}
+
+/* Estilos para a seção "Sobre" */
+.about-content {
+    background: url('img/cubcs.svg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    color: black;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.about-content p {
+    text-shadow: 3px 3px 2px rgba(0, 0, 0, 0.5);
+    color: black;
+}
+
+/* Estilos para as seções */
+section {
+    background: url('img/cubo.svg') no-repeat;
+    background-size: 3%;
+    background-position: right center;
+    padding: 50px 0;
+}
+
+/* Estilos para a lista de habilidades */
+.skills-list {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.skills-list li {
+    margin: 0 10px;
+    color: black;
+    padding: 10px 20px;
+    border-radius: 20px;
+    margin: 10px;
+    transition: transform 0.3s ease;
+}
+
+.skills-list li:hover {
+    transform: scale(1.1);
+}
+
+/* Estilos para os projetos */
+.project {
+    background: url('img/cuboleft.svg') no-repeat;
+    background-size: 10%;
+    background-position: left center;
+    margin-bottom: 20px;
+}
+
+.project a {
+    display: block;
+    margin-top: 10px;
+    color: var(--accent-color);
+    text-decoration: none;
+}
+
+.project video {
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos para o carrossel */
+.carousel {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+}
+
+.carousel .item {
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+    width: 100%;
+    transition: transform 0.5s;
+}
+
+.carousel .item:hover {
+    transform: scale(1);
+    transition: transform 0.3s ease-in-out;
+    background-position: 60px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+.carousel .item:active {
+    transform: scale(1);
+    transition: transform 0.3s ease-in-out;
+    background-position: 500px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+/* Estilos responsivos para o carrossel */
+@media (max-width: 600px) {
+    .carousel .item {
+        width: 100%;
+    }
+}
+
+@media (min-width: 601px) and (max-width: 900px) {
+    .carousel .item {
+        width: 50%;
+    }
+}
+
+@media (min-width: 901px) {
+    .carousel .item {
+        width: 33.33%;
+    }
+}
+
+/* Estilos para o formulário de contato */
+#contact-form {
+    background: url('img/cubo.svg') no-repeat;
+    background-size: 10%;
+    background-position: right center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--secondary-color);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.input-group {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.input-group input,
+.input-group textarea {
+    width: 50%;
+    padding: 10px;
+    border: 1px solid var(--primary-color);
+    border-radius: 20px;
+}
+
+#contact-form button {
+    background-color: var(--accent-color);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 15px;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+#contact-form button:hover {
+    background-color: darken(var(--accent-color), 10%);
+}
+
+/* Estilos para o rodapé */
+footer {
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Animações */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1.1);
+    }
+}
+
+/* Animações */
+@keyframes glow {
+    0% {
+        box-shadow: 0 0 10px rgba(171, 227, 234, 0.5);
+        /* Cor mais clara */
+    }
+
+    100% {
+        box-shadow: 0 0 20px rgba(171, 227, 234, 0.8);
+        /* Cor mais clara */
+    }
+}
