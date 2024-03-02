@@ -1,15 +1,60 @@
+/* Estilos para o ícone de tema em telas menores */
+@media (max-width: 600px) {
+    #theme-icon {
+        top: 10px;
+        right: 10px;
+    }
+}
+
+/* Ajuste de largura para elementos em media queries */
+@media (max-width: 600px) {
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-links li {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+
+    .carousel .item {
+        width: 90%;
+    }
+
+    .input-group input,
+    .input-group textarea {
+        width: 100%;
+    }
+}
+
+@media (min-width: 601px) and (max-width: 900px) {
+    .carousel .item {
+        width: 45%;
+    }
+}
+
+@media (min-width: 901px) {
+    .carousel .item {
+        width: 30%;
+    }
+}
+
+
 /* Definindo fontes */
 :root {
-    --font-primary: 'Roboto', sans-serif;
-    --font-secondary: 'Open Sans', sans-serif;
+    --font-primary: 'Inter', sans-serif;
+    --font-secondary: 'Apercu', sans-serif;
 }
 
 /* Definição de cores */
 :root {
-    --primary-color: #737778;
-    --secondary-color: #f2f2f2;
-    --accent-color: #abe3ea;
-    --accent-color-light: #f6d775;
+    --primary-color: #1a202c;
+    --secondary-color: #2d3748;
+    --accent-color: #238636;
+    --accent-color-light: #81e6d9;
+    --dark-mode-bg: #2d3748;
+    --dark-mode-text: #edf2f7;
 }
 
 /* Resetando margens e paddings */
@@ -21,17 +66,19 @@
 
 /* Estilos básicos para o corpo do documento */
 body {
-    font-family: 'Inter', sans-serif;
+    font-family: var(--font-primary);
     color: var(--primary-color);
     line-height: 1.6;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Estilos para o modo escuro */
-.dark-mode {
-    background-color: #333;
-    color: #ccc;
-    transition: background-color 0.5s ease, color 0.5s ease;
+/* Modo escuro */
+body.dark-mode {
+    background-color: var(--dark-mode-bg);
+    color: var(--dark-mode-text);
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
+
 
 /* Estilos para o ícone de tema */
 #theme-icon {
@@ -48,49 +95,61 @@ body {
     transition: fill 0.5s ease;
 }
 
-/* Estilos para a navegação, logo e links */
+body.dark-mode #theme-icon svg {
+    fill: var(--dark-mode-text);
+}
+
+/* Estilos atualizados para a navegação, logo e links */
 nav {
     background-color: var(--primary-color);
-    color: #fff;
+    color: var(--dark-mode-text);
     padding: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    text-align: center;
+    transition: all 0.3s ease;
 }
 
 .logo {
     font-size: 24px;
     font-weight: bold;
-    font-family: var(--font-secondary);
-    background: url('img/cubo.svg') no-repeat center center;
+    font-family: var(--font-primary);
+    background: url('img/logo-analist (2).png') no-repeat center center;
     background-size: contain;
     width: 100px;
     height: 80px;
     animation: pulse 2s infinite alternate;
+    transition: all 0.3s ease;
 }
 
 .nav-links {
     list-style-type: none;
     display: flex;
+    flex-wrap: wrap;
 }
 
 .nav-links li {
     margin-left: 20px;
+    /* Substituir ou ajustar conforme necessário */
 }
 
 .nav-links li a {
-    color: #fff;
+    color: var(--dark-mode-text);
     text-decoration: none;
+    transition: color 0.3s ease;
 }
 
-.nav-links :hover {
-    transform: scale(1.1);
+.nav-links li:hover a {
+    color: var(--accent-color);
 }
 
 /* Estilos para o conteúdo principal */
 main {
     text-align: center;
     padding: 50px 0;
+    background-color: var(--secondary-color);
+    transition: all 0.3s ease;
 }
 
 /* Estilos para o cabeçalho */
@@ -104,7 +163,18 @@ header {
     transition: all 0.5s ease;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     animation: glow 2s infinite alternate;
-    /* Adicionando animação */
+}
+
+.logo-header {
+    font-size: 24px;
+    font-weight: bold;
+    font-family: var(--font-primary);
+    background: url('img/logo-analist (2).png') no-repeat center center;
+    background-size: contain;
+    width: 100px;
+    height: 80px;
+    animation: pulse 2s infinite alternate;
+    margin: 0 auto;
 }
 
 header:hover {
@@ -114,26 +184,89 @@ header:hover {
 
 header h1 {
     text-shadow: 3px 3px 2px rgba(0, 0, 0, 0.5);
-    color: white;
+    color: var(--dark-mode-text);
 }
 
-/* Estilos para a seção "Sobre" */
+header.dark-mode {
+    background-color: var(--primary-color);
+    color: var(--dark-mode-text);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Estilos atualizados para a seção "Sobre" */
 .about-content {
-    background: url('img/cubcs.svg') no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    color: black;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    background: var(--secondary-color);
+    color: var(--dark-mode-text);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    -webkit-animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+    animation: tracking-in-expand 4.0s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+}
+
+.about-content:hover {
+    box-shadow: 0px 0px 30px var(--accent-color);
 }
 
 .about-content p {
-    text-shadow: 3px 3px 2px rgba(0, 0, 0, 0.5);
-    color: black;
+    color: var(--dark-mode-text);
+    line-height: 1.6;
 }
+
+/* Modo escuro */
+@media (prefers-color-scheme: dark) {
+    .about-content {
+        background: var(--dark-mode-bg);
+        color: var(--dark-mode-text);
+    }
+
+    .about-content:hover {
+        box-shadow: 0px 0px 30px var(--accent-color-light);
+    }
+
+    .about-content p {
+        color: var(--dark-mode-text);
+    }
+}
+
+/* Definição da animação */
+@-webkit-keyframes tracking-in-expand {
+    0% {
+        letter-spacing: -0.5em;
+        opacity: 0;
+    }
+
+    40% {
+        opacity: 0.6;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes tracking-in-expand {
+    0% {
+        letter-spacing: -0.5em;
+        opacity: 0;
+    }
+
+    40% {
+        opacity: 0.6;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.about-content.dark-mode {
+    background: var(--dark-mode-bg);
+    color: var(--dark-mode-text);
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
 
 /* Estilos para as seções */
 section {
@@ -143,25 +276,132 @@ section {
     padding: 50px 0;
 }
 
-/* Estilos para a lista de habilidades */
+/* Definição da animação */
+@-webkit-keyframes kenburns-top {
+    0% {
+        -webkit-transform: scale(1) translateY(0);
+        transform: scale(1) translateY(0);
+        -webkit-transform-origin: 50% 16%;
+        transform-origin: 50% 16%;
+    }
+
+    100% {
+        -webkit-transform: scale(1.25) translateY(-15px);
+        transform: scale(1.25) translateY(-15px);
+        -webkit-transform-origin: top;
+        transform-origin: top;
+    }
+}
+
+@keyframes kenburns-top {
+    0% {
+        -webkit-transform: scale(1) translateY(0);
+        transform: scale(1) translateY(0);
+        -webkit-transform-origin: 50% 16%;
+        transform-origin: 50% 16%;
+    }
+
+    100% {
+        -webkit-transform: scale(1.25) translateY(-15px);
+        transform: scale(1.25) translateY(-15px);
+        -webkit-transform-origin: top;
+        transform-origin: top;
+    }
+}
+
+section.dark-mode {
+    background: url('img/cubo-dark.svg') no-repeat;
+    background-size: 3%;
+    background-position: right center;
+    padding: 50px 0;
+    transition: background 0.3s ease;
+}
+
+/* seção IA */
+#ai-section {
+    background: var(--primary-color) url('img/luz.jpg') no-repeat center center;
+    background-size: cover;
+    color: var(--dark-mode-text);
+    padding: 100px 0;
+    -webkit-animation: kenburns-top 5s ease-out both;
+    animation: kenburns-top 5s ease-out both;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 100px;
+}
+
+.ai-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.ai-content {
+    padding: 20px;
+}
+
+.ai-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.ai-content p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.ai-button {
+    display: inline-block;
+    background-color: var(--accent-color);
+    color: var(--dark-mode-text);
+    padding: 15px 30px;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.ai-button:hover {
+    background-color: red;
+}
+
+#ai-section.dark-mode {
+    background: var(--primary-color) url('img/luz-dark.jpg') no-repeat center center;
+    transition: background 0.3s ease;
+}
+
+/* Estilos atualizados para a lista de habilidades */
 .skills-list {
     list-style-type: none;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     flex-wrap: wrap;
+    padding: 20px;
+    background: var(--secondary-color);
+    border-radius: 20px;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
 }
 
 .skills-list li {
-    margin: 0 10px;
-    color: black;
-    padding: 10px 20px;
-    border-radius: 20px;
     margin: 10px;
-    transition: transform 0.3s ease;
+    color: var(--dark-mode-text);
+    padding: 20px;
+    border-radius: 30px;
+    transition: transform 0.3s ease, background 0.3s ease;
+    background: var(--primary-color);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
 }
 
 .skills-list li:hover {
     transform: scale(1.1);
+    background: var(--accent-color);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
 }
 
 /* Estilos para os projetos */
@@ -185,106 +425,193 @@ section {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
+.project.dark-mode {
+    background: url('img/cuboleft-dark.svg') no-repeat;
+    transition: background 0.3s ease;
+}
+
+/* git-hub*/
+.git {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    transition: all 0.5s;
+    cursor: pointer;
+    text-decoration: none;
+    overflow: hidden;
+    font-family: var(--font-primary);
+    color: var(--primary-color);
+    margin: auto;
+}
+
+.git a {
+    color: var(--accent-color-light);
+    text-decoration: none;
+    margin: auto;
+}
+
+.git a:hover {
+    color: var(--accent-color);
+}
+
+.git a i {
+    transition: all 0.5s;
+}
+
+.git a:hover i {
+    transform: scale(1.2);
+}
+
 /* Estilos para o carrossel */
 .carousel {
     display: flex;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
+    width: 100%;
+    justify-content: center;
+    padding: 20px;
+    background-color: var(--dark-mode-text);
+    color: var(--dark-mode-text);
+    box-sizing: border-box;
 }
 
 .carousel .item {
     flex: 0 0 auto;
     scroll-snap-align: start;
     width: 100%;
+    max-width: 250px;
     transition: transform 0.5s;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    margin: 0 10px;
+    border-radius: 10px;
+    background-color: var(--secondary-color);
+    padding: 20px;
+    box-sizing: border-box;
 }
 
 .carousel .item:hover {
-    transform: scale(1);
-    transition: transform 0.3s ease-in-out;
-    background-position: 60px;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    transform: scale(1.05);
 }
 
 .carousel .item:active {
-    transform: scale(1);
-    transition: transform 0.3s ease-in-out;
-    background-position: 500px;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    transform: scale(0.95);
 }
 
-/* Estilos responsivos para o carrossel */
-@media (max-width: 600px) {
-    .carousel .item {
-        width: 100%;
-    }
+/* Estilos FAQ */
+
+.faq-section {
+    width: 100%;
+    margin: auto;
+    background-color: #f9f9f9;
+    border-radius: 15px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+    padding: 20px;
 }
 
-@media (min-width: 601px) and (max-width: 900px) {
-    .carousel .item {
-        width: 50%;
-    }
+.faq-section h2 {
+    text-align: center;
+    color: #333;
+    font-size: 2em;
 }
 
-@media (min-width: 901px) {
-    .carousel .item {
-        width: 33.33%;
-    }
+.faq {
+    margin-top: 20px;
+}
+
+.faq input {
+    display: none;
+}
+
+.faq label {
+    display: block;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 5px;
+}
+
+.faq label:hover {
+    background-color: #444;
+}
+
+.faq p {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    padding: 0 10px;
+    color: #666;
+    line-height: 1.6;
+}
+
+.faq input:checked+label+p {
+    max-height: 100px;
 }
 
 /* Estilos para o formulário de contato */
-#contact-form {
-    background: url('img/cubo.svg') no-repeat;
-    background-size: 10%;
-    background-position: right center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: var(--secondary-color);
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-}
 
-.input-group {
-    width: 100%;
-    margin-bottom: 20px;
-}
 
-.input-group label {
-    display: block;
-    margin-bottom: 5px;
-}
-
-.input-group input,
-.input-group textarea {
-    width: 50%;
-    padding: 10px;
-    border: 1px solid var(--primary-color);
-    border-radius: 20px;
-}
-
-#contact-form button {
-    background-color: var(--accent-color);
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
+/* Ajuste whatsapp */
+.whatsapp-button {
     cursor: pointer;
-    border-radius: 15px;
-    margin-top: 20px;
-    transition: background-color 0.3s ease;
+    color: white;
+    background: #25D366;
+    fill: white;
+    width: 60px;
+    height: 60px;
+    z-index: 16777270;
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+    border: 0px;
+    box-sizing: border-box;
+    padding: 12px;
+    margin: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    box-shadow: rgba(255, 255, 255, 0.5) 0px 1px 2px 0px inset, rgba(0, 0, 0, 0.1) 0px -4px 8px 0px inset, rgba(22, 22, 22, 0.5) 0.3em 0.3em 1.4em;
 }
 
-#contact-form button:hover {
-    background-color: darken(var(--accent-color), 10%);
+.whatsapp-button i {
+    font-size: 24px;
 }
 
 /* Estilos para o rodapé */
 footer {
     background-color: var(--primary-color);
-    color: #fff;
+    color: var(--dark-mode-text);
     padding: 20px;
     text-align: center;
+}
+
+.footer-social-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    list-style: none;
+    padding: 0;
+}
+
+.footer-social-icons .socialLink-2PyA13 {
+    margin: 0 5px;
+    width: 24px;
+    height: 24px;
+}
+
+.footer-social-icons .socialLink-2PyA13 i {
+    width: 100%;
+    height: 100%;
+    color: var(--dark-mode-text);
+}
+
+footer.dark-mode {
+    background-color: var(--primary-color);
+    color: var(--dark-mode-text);
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 /* Animações */
@@ -302,11 +629,9 @@ footer {
 @keyframes glow {
     0% {
         box-shadow: 0 0 10px rgba(171, 227, 234, 0.5);
-        /* Cor mais clara */
     }
 
     100% {
         box-shadow: 0 0 20px rgba(171, 227, 234, 0.8);
-        /* Cor mais clara */
     }
 }

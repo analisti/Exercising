@@ -4,10 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfólio Pessoal</title>
+    <title>analist.com</title>
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@400;700&display=swap"
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@400;700&display=swap"
         rel="stylesheet">
     <link rel="icon" href="img/cubo.svg" type="image/x-icon">
 </head>
@@ -19,15 +20,17 @@
         <ul class="nav-links">
             <li><a href="#about">Sobre</a></li>
             <li><a href="#skills">Habilidades</a></li>
-            <li><a href="#projects">Projetos</a></li>
+            <li><a href="#ai-section">Inteligência Artificial</a></li>
+            <li><a href="https://forms.visme.co/formsPlayer/4d7zz8yz-contatos-analist-com" target="_blank"
+                    rel="nofollow">
             <li><a href="#contact">Contato</a></li>
         </ul>
     </nav>
 
     <!-- Ícone para alternar entre os modos claro e escuro -->
     <span id="theme-icon" title="Mudar o Tema">
-        <svg viewBox="0 0 20 20" aria-hidden="true" focusable="false" fill="currentColor"
-            xmlns="http://www.w3.org/2000/svg" class="StyledIconBase-ea9ulj-0 hPhvO">
+        <svg viewBox="0 0 20 20" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"
+            class="StyledIconBase-ea9ulj-0 hPhvO">
             <path fill-rule="evenodd"
                 d="M7.186 19.172c.789.51 1.701.855 2.814.828 1.111.027 2.025-.318 2.814-.828L12.797 17H7.203l-.017 2.172zM12.697 16c0-4.357 4.63-5.848 4.283-10.188-.218-2.738-2.073-5.81-6.98-5.81S3.238 3.074 3.019 5.813C2.672 10.152 7.303 11.643 7.303 16h5.394zM5 6c.207-2.598 2.113-4 5-4 2.886 0 4.654 1.371 4.861 3.969.113 1.424-.705 2.373-1.809 3.926C12.238 11.041 11.449 12.238 11 14H9c-.449-1.762-1.238-2.959-2.053-4.106C5.844 8.342 4.886 7.424 5 6z"
                 clip-rule="evenodd"></path>
@@ -38,13 +41,13 @@
     <main>
         <!-- Cabeçalho -->
         <header>
-            <h1>Bem vindo ao meu portfólio</h1>
-            <p>Transformando Ideias em Experiências Digitais!</p>
+            <div class="logo-header"></div>
+            <p>Transformando Ideias em Experiências Digitais.</p>
         </header>
 
         <!-- Sobre -->
         <section id="about">
-            <h2>Sobre Mim</h2>
+            <h2>O que faço</h2>
             <div class="about-content">
                 <p>“Ofereço serviços de software personalizados para criar sites incríveis e
                     sistemas eficientes. Sou extremamente profissional trabalhando lado a lado com você para
@@ -53,10 +56,27 @@
             </div>
         </section>
 
+        <!-- Ia -->
+        <section id="ai-section">
+            <div class="ai-container">
+                <div class="ai-content">
+                    <h2>Descubra o Futuro dos Negócios</h2>
+                    <p>Conheça meu projeto de IA revolucionária que está mudando a forma como os empreendedores
+                        encontram novas
+                        oportunidades.</p>
+                    <a href="https://www.buildai.space/app/analistcom-app" target="_blank" rel="nofollow"
+                        class="ai-button">Conheça Agora</a>
+                </div>
+            </div>
+        </section>
+
+
         <!-- Habilidades -->
         <section id="skills">
-            <h2>Habilidades</h2>
+            <h2>Minhas Habilidades</h2>
             <h3>Front-end</h3>
+            <i>É uma área da programação que se dedica a criar a parte visual e interativa de um site, aplicativo ou
+                software. É o que o usuário vê e usa quando acessa uma plataforma digital.</i>
             <ul class="skills-list">
                 <li><i class="fab fa-html5"></i> HTML</li>
                 <li><i class="fab fa-css3-alt"></i> CSS</li>
@@ -64,6 +84,9 @@
                 <li><i class="fab fa-react"></i> React Native (Desenvolvedor Mobile)</li>
             </ul>
             <h3>Back-end</h3>
+            <i>As linguagens de programação backend lidam com os bastidores das funcionalidades das aplicações web. É o
+                código que conecta a internet com o banco de dados, gerencia as conexões dos usuários e alimenta a
+                aplicação web.</i>
             <ul class="skills-list">
                 <li><i class="fab fa-java"></i> Java</li>
                 <li><i class="fas fa-database"></i> MySQL</li>
@@ -73,15 +96,22 @@
 
         <!-- Projetos -->
         <section id="projects">
-            <h2>Projetos</h2>
+            <h2>Entendenda a diferença entre Hardware e Software</h2>
             <div class="project">
-                <a href="#">Demostrativo de como meu trabalho funciona</a>
                 <video width="320" height="240" controls muted>
                     <source src="video/HardwareSoftware.mp4" type="video/mp4">
                     Seu navegador não suporta o elemento de vídeo.
                 </video>
-                <a href="https://github.com/analisti" target="_blank" rel="nofollow">Repositório GitHub</a>
             </div>
+
+            <div class="git">
+                <li>
+                    <a href="https://github.com/analisti" target="_blank" rel="nofollow">
+                        <i class="fab fa-github"></i> Repositório GitHub - Projetos Realizados
+                    </a>
+                </li>
+            </div>
+
         </section>
 
         <!-- Carrossel -->
@@ -97,6 +127,7 @@
             <div class="item">
                 <img src="img/site02.svg" width="250px" height="300px" alt="Item 2">
                 <div class="fa fa-star checked"></div>
+                <div class="fa fa-star checked"></div>
                 <h2>Seu site com cadastro de clientes ou produtos</h2>
                 <p>Preço: A partir de R$ 2.499,00</p>
                 <p>Descrição: Um site personalizado com design exclusivo, recursos avançados e integração com redes
@@ -105,6 +136,8 @@
             <div class="item">
                 <img src="img/sistema03.svg" width="250px" height="300px" alt="Item 3">
                 <div class="fa fa-star checked"></div>
+                <div class="fa fa-star checked"></div>
+                <div class="fa fa-star checked"></div>
                 <h2>Um sistema completo </h2>
                 <p>Preço: A partir de R$ 4.999,00</p>
                 <p>Descrição: Um sistema completo com painel de administração, segurança avançada e suporte contínuo.
@@ -112,31 +145,73 @@
             </div>
         </div>
 
+        <!-- perguntas FAQ -->
+        <div class="faq-section">
+            <h2>FAQ: Perguntas frequentes sobre criação de site</h2>
+            <div class="faq">
+                <input type="checkbox" id="q1">
+                <label for="q1">O que é um site?</label>
+                <p>Um site é um conjunto de páginas web acessíveis através de um único endereço da web, conhecido como
+                    URL, ou seja que compartilham o mesmo domínio. Os sites podem ter diversas finalidades, desde servir
+                    como a presença online de indivíduos, empresas ou organizações, até possibilitar a venda de produtos
+                    ou prestação de serviços. As páginas web que compõem um site podem conter vários elementos, como
+                    texto, imagens, vídeos, animações, entre outros recursos interativos.</p>
+            </div>
+            <div class="faq">
+                <input type="checkbox" id="q2">
+                <label for="q2">O que é um sistema?</label>
+                <p>Um sistema ou um software é um conjunto de instruções que devem ser seguidas e executadas por um
+                    mecanismo, seja ele um
+                    computador ou um celular, É o termo usado para descrever programas, aplicativos para celulares e
+                    etc...criando códigos de que chamamos de linguagem de programação para instruir o que uma máquina
+                    deve fazer.
+                </p>
+            </div>
+        </div>
+
         <!-- Contato -->
         <section id="contact">
-            <h2>Contate-me</h2>
-            <form id="contact-form" method="POST" action="https://formspree.io/f/xbjnyrvq">
-                <div class="input-group">
-                    <label for="name">Nome:</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
-                <div class="input-group">
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                <div class="input-group">
-                    <label for="message">Mensagem:</label>
-                    <textarea id="message" name="message" required></textarea>
-                </div>
-                <button type="submit">Enviar Mensagem</button>
-            </form>
+            <div class="visme_d" data-title="Contatos analist.com" data-url="4d7zz8yz-contatos-analist-com"
+                data-domain="forms" data-full-page="false" data-min-height="500px" data-form-id="34148"></div>
+            <script src="https://static-bundles.visme.co/forms/vismeforms-embed.js"></script>
         </section>
     </main>
+
+    <!-- WhatsApp Button -->
+    <a href="https://api.whatsapp.com/send?phone=5561992594747&text=Ol%C3%A1!%20Estou%20entrando%20em%20contato%20pelo%20seu%20site."
+        target="_blank">
+        <button id="whatsapp-button" class="whatsapp-button" aria-label="WhatsApp Button" title="WhatsApp Button">
+            <i class="fab fa-whatsapp"></i>
+        </button>
+    </a>
+
 
     <!-- Rodapé -->
     <footer>
         <p>© 2024 analist.com@outlook.com</p>
+        <ul class="footer-social-icons">
+            <li><a class="socialLink-2PyA13" href="#" target="_blank" aria-label="facebook" title="Facebook"
+                    data-hook="social-bar__socialLink socialLink--id_facebook"><i class="fab fa-facebook-f"></i></a>
+            </li>
+            <li><a class="socialLink-2PyA13" href="#" target="_blank" aria-label="youtube" title="Youtube"
+                    data-hook="social-bar__socialLink socialLink--id_youtube"><i class="fab fa-youtube"></i></a></li>
+            <li><a class="socialLink-2PyA13" href="https://instabio.cc/ciclododinheiro" target="_blank"
+                    aria-label="instagram" title="Instagram"
+                    data-hook="social-bar__socialLink socialLink--id_instagram"><i class="fab fa-instagram"></i></a>
+            </li>
+            <li><a class="socialLink-2PyA13" href="#" target="_blank" aria-label="tiktok" title="TikTok"
+                    data-hook="social-bar__socialLink socialLink--id_tiktok"><i class="fab fa-tiktok"></i></a></li>
+            <li><a class="socialLink-2PyA13" href="#" target="_blank" aria-label="pinterest" title="Pinterest"
+                    data-hook="social-bar__socialLink socialLink--id_pinterest"><i class="fab fa-pinterest"></i></a>
+            </li>
+            <li><a class="socialLink-2PyA13" href="#" target="_blank" aria-label="twitter" title="Twitter"
+                    data-hook="social-bar__socialLink socialLink--id_twitter"><i class="fab fa-twitter"></i></a></li>
+            <li><a class="socialLink-2PyA13" href="#" target="_blank" aria-label="linkedin" title="Linkedin"
+                    data-hook="social-bar__socialLink socialLink--id_linkedin"><i class="fab fa-linkedin-in"></i></a>
+            </li>
+        </ul>
     </footer>
+
 
     <!-- Script -->
     <script src="scrypt.js" async></script>
