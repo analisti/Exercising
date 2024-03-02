@@ -12,6 +12,7 @@ const smoothScroll = () => {
     });
 }
 
+
 // Função para lidar com o envio do formulário
 const handleFormSubmission = () => {
     const form = document.getElementById('contact-form');
@@ -60,20 +61,23 @@ const rotateCarousel = () => {
 // Função para alternar entre os modos claro e escuro
 const toggleDarkMode = () => {
     const themeIcon = document.getElementById('theme-icon');
+    const body = document.body; // Seleciona o elemento body
 
-    // Imprime o elemento selecionado no console
-    console.log(themeIcon);
-
+    // Adiciona um event listener para o clique no ícone de tema
     themeIcon.addEventListener('click', () => {
-        console.log('Ícone de tema clicado');
-        document.body.classList.toggle('dark-mode');
+        // Alterna a classe dark-mode no corpo do documento
+        body.classList.toggle('dark-mode');
     });
 }
+
+// Chama a função toggleDarkMode para que o event listener seja adicionado
+toggleDarkMode();
+
 
 // Chamar as funções quando o DOM estiver totalmente carregado
 document.addEventListener('DOMContentLoaded', () => {
     smoothScroll();
     handleFormSubmission();
     rotateCarousel();
-    toggleDarkMode(); // Adicionado a chamada para a função de alternar o modo escuro
+    toggleDarkMode();
 });
